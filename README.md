@@ -8,7 +8,7 @@
 ## 🔤 미션을 하기 위해 구현해야하는 것
 #### 아래의 링크에 구현된 To-do List를 구현하세요.
   - styled-components 라이브러리를 사용해 style을 입혀야합니다.
-  - 🌏 Link
+  - [🌏 Link](https://greedy-todo-app.netlify.app/)
 #### 요구 기능은 다음과 같습니다.
   - 삭제/추가/체크 기능이 있어야 하며 App.js(jsx)에서 구현됩니다.
   - todos 배열은 상태로 관리되어야하며 그 내부 객체는 아래의 key값을 가져야합니다.
