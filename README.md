@@ -5,7 +5,7 @@
 - styled-component를 사용해 스타일이 적용된 컴포넌트를 처음부터 만들 수 있습니다.
 - 2500개의 할 일 컴포넌트를 렌더링하며 렌더링 지연 현상을 겪고 렌더링 최적화를 통해 이를 해결할 수 있습니다.
 - 컴포넌트 가상화를 애플리케이션에 적용할 수 있습니다.
-## 🔤 미션을 하기 위해 구현해야하는 것
+## 1️⃣ Step1 요구사항
 #### 아래의 링크에 구현된 To-do List를 구현하세요.
   - styled-components 라이브러리를 사용해 style을 입혀야합니다.
   - [🌏 Link](https://greedy-todo-app.netlify.app/)
@@ -28,7 +28,7 @@
 #### TodoList
     todo배열을 props로 받아 온 후, 여러개의 TodoListItem 컴포넌트로 변환한 후 보여줍니다.
 
-## 🎯 요구사항
+## 2️⃣ Step2 요구사항
 - 미션 이전의 요구사항 구현을 완료했다면 아래의 **createBulkTodos()함수**를 todos상태에 초기화하며 선언해주세요.
   ```javascript
   //App.js
