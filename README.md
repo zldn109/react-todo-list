@@ -35,7 +35,7 @@
     todo배열을 props로 받아 온 후, 여러개의 TodoListItem 컴포넌트로 변환한 후 보여줍니다.
 
 ## 2️⃣ Step2 요구사항
-- 미션 이전의 요구사항 구현을 완료했다면 아래의 **createBulkTodos()함수**를 todos상태에 초기화하며 선언해주세요.
+- step1의 요구사항 구현을 완료했다면 아래의 **createBulkTodos()함수**를 todos상태에 초기화하며 선언해주세요.
   ```javascript
   //App.js
   function createBulkTodos(){
