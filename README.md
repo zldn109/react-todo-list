@@ -7,6 +7,10 @@
 - 컴포넌트 가상화를 애플리케이션에 적용할 수 있습니다.
 ## 1️⃣ Step1 요구사항
 ### 아이콘은 [react-icons](https://react-icons.github.io/react-icons/)를 사용합니다
+    MdCheckBoxOutlineBlank,
+    MdCheckBox,
+    MdRemoveCircleOutline,
+    MdAdd
 ### 아래의 링크에 구현된 To-do List를 구현하세요.
   - styled-components 라이브러리를 사용해 style을 입혀야합니다.
   - [🌏 Link](https://greedy-todo-app.netlify.app/)
