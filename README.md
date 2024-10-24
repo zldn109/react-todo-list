@@ -14,6 +14,7 @@
 ### 아래의 링크에 구현된 To-do List를 구현하세요.
   - styled-components 라이브러리를 사용해 style을 입혀야합니다.
   - [🌏 Link](https://greedy-todo-app.netlify.app/)
+  - Greedy Logo Image는 /src/asset에 존재하며 아이콘은 /public 폴더에 존재합니다.
 ### 요구 기능은 다음과 같습니다.
   - 삭제/추가/체크 기능이 있어야 하며 App.js(jsx)에서 구현됩니다.
   - todos 배열은 상태로 관리되어야하며 그 내부 객체는 아래의 key값을 가져야합니다.
@@ -33,7 +34,6 @@
     각 할 일 항목에 대한 정보를 보여주는 컴포넌트. Todo 객체를 props로 받아와 상태에 따라 다른 스타일의 UI를 보여줍니다.
 #### TodoList
     todo배열을 props로 받아 온 후, 여러개의 TodoListItem 컴포넌트로 변환한 후 보여줍니다.
-
 ## 2️⃣ Step2 요구사항
 - 미션 이전의 요구사항 구현을 완료했다면 아래의 **createBulkTodos()함수**를 todos상태에 초기화하며 선언해주세요.
   ```javascript
