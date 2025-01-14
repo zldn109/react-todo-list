@@ -56,7 +56,7 @@
   ...some codes...
   }
   ```
-  2500개의 데이터를 렌더링하면 애플리케이션은 느려집니다. **왜** 느려지는지 **원인을 분석**하고 그 결과를 **PR**에 적어주세요.
+  2500개의 데이터를 렌더링하면 애플리케이션은 느려집니다. **왜** 느려지는지 **원인을 분석**하고 그 결과를 **PR**에 적어주세요.<br/>
   **[ReactDevTools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=ko&pli=1)-Profiler**를 이용해서 어떤 컴포넌트가 리렌더링되는지 확인하고 원인을 분석해 **컴포넌트 렌더링 최적화**와 **가상화**를 이뤄내보세요.
   - 컴포넌트 최적화&가상화를 적용하기 이전의 Profiler의 스크린샷과 이후의 스크린샷을 찍어 비교해주세요.
 ## ✅ 키워드
