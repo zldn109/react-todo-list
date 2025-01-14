@@ -16,7 +16,7 @@
   - [🌏 Link](https://greedy-todo-app.netlify.app/)
   - Greedy Logo Image는 `/src/asset`에 존재하며 아이콘은 `/public` 폴더에 존재합니다.
 ### 요구 기능은 다음과 같습니다.
-  - 삭제/추가/체크 기능이 있어야 하며 App.js(jsx)에서 구현됩니다.
+  - 삭제/추가/체크 기능이 있어야 하며 `App.js(jsx)`에서 구현됩니다.
   - todos 배열은 상태로 관리되어야하며 그 내부 객체는 아래의 key값을 가져야합니다.
     ```
     {
