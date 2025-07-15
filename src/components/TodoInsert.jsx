@@ -25,6 +25,11 @@ const TodoAddButton = styled.button`
   height: 3.5rem;
   border: none;
   font-size: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--add-button-light);
+  }
 `;
 
 const TodoInsert = () => {
