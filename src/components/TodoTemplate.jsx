@@ -34,13 +34,14 @@ const TodoTitle = styled.div`
   }
 `;
 
-const TodoTemplate = () => {
+const TodoTemplate = ({ children }) => {
   return (
     <TodoTemplateBlock>
       <TodoTitle>
         <img src={logo} alt="로고"></img>
         <div>일정관리</div>
       </TodoTitle>
+      {children}
     </TodoTemplateBlock>
   );
 };

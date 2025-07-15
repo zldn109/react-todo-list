@@ -5,11 +5,12 @@
   --line-height: 1.4;
   --border-radius: 0.5rem;
   --template-width: 40rem;
-  --template-min-height: 32rem;
+  --template-min-height: 34rem;
 
   --background: #bcbfc1;
   --title: #017356;
-  --input: #ffffff;
+  --input: #485056;
+  --input-placeholder: #dce1e4;
   --add-button: #858e96;
   --delete-button: #ff6b6b;
 
