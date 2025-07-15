@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MdAdd } from "react-icons/md";
 
 const TodoInsertBlock = styled.div`
   display: flex;
@@ -36,7 +37,9 @@ const TodoInsert = () => {
   return (
     <TodoInsertBlock>
       <TodoInput placeholder="할 일을 입력하세요" />
-      <TodoAddButton>+</TodoAddButton>
+      <TodoAddButton>
+        <MdAdd />
+      </TodoAddButton>
     </TodoInsertBlock>
   );
 };
