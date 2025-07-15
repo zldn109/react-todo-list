@@ -1,0 +1,24 @@
+:root {
+  --font-family: "SUIT Variable", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+  --line-height: 1.4;
+  --border-radius: 0.5rem;
+
+  --background: #bcbfc1;
+  --title: #017356;
+  --input: #ffffff;
+  --add-button: #858e96;
+  --delete-button: #ff6b6b;
+
+  --white: #ffffff;
+  --black: #111111;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: var(--line-height);
+  scroll-behavior: smooth;
+}
