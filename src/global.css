@@ -4,6 +4,8 @@
     "Malgun Gothic", sans-serif;
   --line-height: 1.4;
   --border-radius: 0.5rem;
+  --template-width: 40rem;
+  --template-min-height: 32rem;
 
   --background: #bcbfc1;
   --title: #017356;
