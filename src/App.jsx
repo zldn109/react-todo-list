@@ -17,12 +17,20 @@ function App() {
     };
     setTodos((todos) => [...todos, todo]);
     nextId.current += 1;
-  });
+  }, []);
+
+  const onToggle = useCallback((id) => {
+    setTodos((todos) =>
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, checked: !todo.checked } : todo
+      )
+    );
+  }, []);
 
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onToggle={onToggle} />
       {/* <TodoListItem></TodoListItem> */}
     </TodoTemplate>
   );

@@ -34,7 +34,10 @@ const TodoItemText = styled.div`
   flex: 1;
   background: var(--white);
   font-size: 1.25rem;
+  color: ${(props) => (props.checked ? "var(--text-light)" : "var(--black)")};
+  text-decoration: ${(props) => (props.checked ? "line-through" : "none")};
 `;
+
 const TodoItemRemoveButton = styled.div`
   color: var(--delete-button);
   background: none;
@@ -52,13 +55,13 @@ const TodoItemRemoveButton = styled.div`
   }
 `;
 
-const TodoListItem = ({ todo }) => {
+const TodoListItem = ({ todo, onToggle }) => {
   return (
-    <TodoItemBlock>
+    <TodoItemBlock onClick={() => onToggle(todo.id)}>
       <TodoItemCheckbox>
         {todo.checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </TodoItemCheckbox>
-      <TodoItemText>{todo.text}</TodoItemText>
+      <TodoItemText checked={todo.checked}>{todo.text}</TodoItemText>
       <TodoItemRemoveButton>{<MdRemoveCircleOutline />}</TodoItemRemoveButton>
     </TodoItemBlock>
   );
