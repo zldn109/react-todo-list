@@ -9,6 +9,8 @@ const TodoTemplateBlock = styled.div`
   border-radius: var(--border-radius);
   margin: 8rem auto;
   min-height: var(--template-min-height);
+  max-height: var(--template-max-height);
+  overflow: scroll;
 `;
 
 const TodoTitle = styled.div`

@@ -2,7 +2,6 @@ import "./index.css";
 import TodoTemplate from "./components/TodoTemplate";
 import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
-import TodoListItem from "./components/TodoListItem";
 import { useState, useRef, useCallback } from "react";
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
-      {/* <TodoListItem></TodoListItem> */}
     </TodoTemplate>
   );
 }
