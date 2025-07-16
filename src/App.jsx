@@ -1,6 +1,7 @@
 import "./index.css";
 import TodoTemplate from "./components/TodoTemplate";
 import TodoInsert from "./components/TodoInsert";
+import TodoList from "./components/TodoList";
 import TodoListItem from "./components/TodoListItem";
 import { useState, useRef, useCallback } from "react";
 
@@ -18,12 +19,10 @@ function App() {
     nextId.current += 1;
   });
 
-  console.log(todos);
-
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      {/* <TodoList></TodoList> */}
+      <TodoList todos={todos} />
       {/* <TodoListItem></TodoListItem> */}
     </TodoTemplate>
   );

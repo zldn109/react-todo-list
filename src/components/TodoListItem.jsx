@@ -52,11 +52,13 @@ const TodoItemRemoveButton = styled.div`
   }
 `;
 
-const TodoListItem = () => {
+const TodoListItem = ({ todo }) => {
   return (
     <TodoItemBlock>
-      <TodoItemCheckbox>{<MdCheckBox />}</TodoItemCheckbox>
-      <TodoItemText></TodoItemText>
+      <TodoItemCheckbox>
+        {todo.checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+      </TodoItemCheckbox>
+      <TodoItemText>{todo.text}</TodoItemText>
       <TodoItemRemoveButton>{<MdRemoveCircleOutline />}</TodoItemRemoveButton>
     </TodoItemBlock>
   );
