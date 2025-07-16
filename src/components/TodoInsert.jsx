@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MdAdd } from "react-icons/md";
+import { useState } from "react";
 
 const TodoInsertBlock = styled.div`
   display: flex;
@@ -43,14 +44,28 @@ const TodoAddButton = styled.button`
   }
 `;
 
-const TodoInsert = () => {
+const TodoInsert = ({ onInsert }) => {
+  const [text, setText] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!text.trim()) return;
+    onInsert(text);
+    setText("");
+  };
+
   return (
-    <TodoInsertBlock>
-      <TodoInput placeholder="할 일을 입력하세요" />
-      <TodoAddButton>
-        <MdAdd />
-      </TodoAddButton>
-    </TodoInsertBlock>
+    <form onSubmit={handleSubmit}>
+      <TodoInsertBlock>
+        <TodoInput
+          placeholder="할 일을 입력하세요"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <TodoAddButton type="submit">
+          <MdAdd />
+        </TodoAddButton>
+      </TodoInsertBlock>
+    </form>
   );
 };
 
