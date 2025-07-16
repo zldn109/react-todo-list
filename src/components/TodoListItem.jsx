@@ -17,9 +17,17 @@ const TodoItemBlock = styled.div`
 const TodoItemCheckbox = styled.div`
   display: flex;
   align-items: center;
-  color: var(--checkbox);
-  font-size: 1.8rem;
+  justify-content: center;
   background: none;
+  font-size: 2rem;
+  color: var(--checkbox);
+
+  svg {
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
 `;
 
 const TodoItemText = styled.div`
@@ -29,11 +37,18 @@ const TodoItemText = styled.div`
 `;
 const TodoItemRemoveButton = styled.div`
   color: var(--delete-button);
-  background: var(--white);
-  font-size: 1.7rem;
+  background: none;
+  font-size: 2rem;
 
   &:hover {
     color: var(--delete-button-light);
+  }
+
+  svg {
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block;
   }
 `;
 
@@ -41,7 +56,7 @@ const TodoListItem = () => {
   return (
     <TodoItemBlock>
       <TodoItemCheckbox>{<MdCheckBox />}</TodoItemCheckbox>
-      <TodoItemText>안녕하시옹</TodoItemText>
+      <TodoItemText></TodoItemText>
       <TodoItemRemoveButton>{<MdRemoveCircleOutline />}</TodoItemRemoveButton>
     </TodoItemBlock>
   );

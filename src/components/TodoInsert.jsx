@@ -20,6 +20,9 @@ const TodoInput = styled.input`
 `;
 
 const TodoAddButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--add-button);
   color: var(--white);
   width: 4.2rem;
@@ -30,6 +33,13 @@ const TodoAddButton = styled.button`
 
   &:hover {
     background: var(--add-button-light);
+  }
+
+  svg {
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block;
   }
 `;
 
