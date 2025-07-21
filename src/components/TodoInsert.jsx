@@ -4,6 +4,10 @@ import { useState } from "react";
 
 const TodoInsertBlock = styled.div`
   display: flex;
+  padding-top: 5rem;
+  position: fixed;
+  width: 100%;
+  max-width: var(--template-width);
 `;
 
 const TodoInput = styled.input`

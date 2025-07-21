@@ -13,7 +13,7 @@ const TodoTemplateBlock = styled.div`
   overflow: scroll;
 `;
 
-const TodoTitle = styled.div`
+const TodoTitle = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,9 @@ const TodoTitle = styled.div`
   height: 5rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+  position: fixed;
+  width: inherit;
+  z-index: 99;
 
   img {
     width: 5rem;

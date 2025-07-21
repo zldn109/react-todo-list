@@ -1,8 +1,13 @@
 import TodoListItem from "./TodoListItem";
+import styled from "styled-components";
+
+const TodoListBlock = styled.div`
+  padding-top: 3rem;
+`;
 
 const TodoList = ({ todos, onToggle, onRemove }) => {
   return (
-    <div>
+    <TodoListBlock>
       {todos.map((todo) => (
         <TodoListItem
           key={todo.id}
@@ -11,7 +16,7 @@ const TodoList = ({ todos, onToggle, onRemove }) => {
           onRemove={onRemove}
         />
       ))}
-    </div>
+    </TodoListBlock>
   );
 };
 
