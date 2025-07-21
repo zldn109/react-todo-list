@@ -5,7 +5,7 @@ import {
   MdRemoveCircleOutline,
 } from "react-icons/md";
 
-const TodoItemBlock = styled.div`
+const TodoItemBlock = styled.li`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -14,7 +14,8 @@ const TodoItemBlock = styled.div`
   gap: 1rem;
 `;
 
-const TodoItemCheckbox = styled.div`
+const TodoItemCheckbox = styled.button`
+  all: unset;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +31,7 @@ const TodoItemCheckbox = styled.div`
   }
 `;
 
-const TodoItemText = styled.div`
+const TodoItemText = styled.span`
   flex: 1;
   background: var(--white);
   font-size: 1.25rem;
@@ -42,7 +43,8 @@ const TodoItemText = styled.div`
   text-overflow: ellipsis;
 `;
 
-const TodoItemRemoveButton = styled.div`
+const TodoItemRemoveButton = styled.button`
+  all: unset;
   color: var(--delete-button);
   background: none;
   font-size: 2rem;

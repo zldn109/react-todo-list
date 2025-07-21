@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from "../assets/greedySquareImage.jpg";
 
-const TodoTemplateBlock = styled.div`
+const TodoTemplateBlock = styled.main`
   display: flex;
   flex-direction: column;
   width: var(--template-width);
@@ -31,7 +31,7 @@ const TodoTitle = styled.h1`
     margin-right: 0.5rem;
   }
 
-  div {
+  span {
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
@@ -44,7 +44,7 @@ const TodoTemplate = ({ children }) => {
     <TodoTemplateBlock>
       <TodoTitle>
         <img src={logo} alt="로고"></img>
-        <div>일정관리</div>
+        <span>일정관리</span>
       </TodoTitle>
       {children}
     </TodoTemplateBlock>

@@ -1,8 +1,9 @@
 import TodoListItem from "./TodoListItem";
 import styled from "styled-components";
 
-const TodoListBlock = styled.div`
+const TodoListBlock = styled.ul`
   padding-top: 8.5rem;
+  list-style: none;
 `;
 
 const TodoList = ({ todos, onToggle, onRemove }) => {
