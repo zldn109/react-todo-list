@@ -21,7 +21,7 @@ const TodoTitle = styled.h1`
   height: 5rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  position: fixed;
+  position: absolute;
   width: inherit;
   z-index: 99;
 
