@@ -36,6 +36,10 @@ const TodoItemText = styled.div`
   font-size: 1.25rem;
   color: ${(props) => (props.checked ? "var(--text-light)" : "var(--black)")};
   text-decoration: ${(props) => (props.checked ? "line-through" : "none")};
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const TodoItemRemoveButton = styled.div`
