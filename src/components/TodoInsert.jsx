@@ -46,7 +46,7 @@ const TodoAddButton = styled.button`
 
 const TodoInsert = ({ onInsert }) => {
   const [text, setText] = useState("");
-  const handleSubmit = (e) => {
+  const handleText = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
     onInsert(text);
@@ -54,7 +54,7 @@ const TodoInsert = ({ onInsert }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleText}>
       <TodoInsertBlock>
         <TodoInput
           placeholder="할 일을 입력하세요"
