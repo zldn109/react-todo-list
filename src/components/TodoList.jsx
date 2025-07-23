@@ -2,8 +2,11 @@ import TodoListItem from "./TodoListItem";
 import styled from "styled-components";
 
 const TodoListBlock = styled.ul`
-  padding-top: 8.5rem;
   list-style: none;
+  flex: 1;
+  overflow-y: auto;
+  overflow: scroll;
+  margin-top: 8.5rem;
 `;
 
 const TodoList = ({ todos, onToggle, onRemove }) => {
