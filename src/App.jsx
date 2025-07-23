@@ -4,19 +4,20 @@ import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
 import { useState, useRef, useCallback } from "react";
 
-function App() {
-  const [todos, setTodos] = useState([]);
-  const nextId = useRef(1);
-
-  const onInsert = useCallback((text) => {
-    const todo = {
-      id: nextId.current,
-      text,
+function createBulkTodos() {
+  const array = [];
+  for (let i = 1; i < 2500; i++) {
+    array.push({
+      id: i,
+      text: `할 일${i}`,
       checked: false,
-    };
-    setTodos((todos) => [...todos, todo]);
-    nextId.current += 1;
-  }, []);
+    });
+  }
+  return array;
+}
+
+function App() {
+  const [todos, setTodos] = useState(createBulkTodos());
 
   const onToggle = useCallback((id) => {
     setTodos((todos) =>
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <TodoTemplate>
-      <TodoInsert onInsert={onInsert} />
+      <TodoInsert />
       <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
     </TodoTemplate>
   );
