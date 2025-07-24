@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { MdAdd } from "react-icons/md";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -52,20 +52,23 @@ const TodoAddButton = styled.button`
 
 const TodoInsert = ({ onInsert }) => {
   const [text, setText] = useState("");
-  const handleTodoValue = (e) => {
-    e.preventDefault();
-    if (!text.trim()) return;
+  const handleTodoValue = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!text.trim()) return;
 
-    if (text.length > 50) {
-      toast.error("⚠ 50자 이하로 입력해주세요!", {
-        position: "top-center",
-        autoClose: 2000,
-      });
-      return;
-    }
-    onInsert(text);
-    setText("");
-  };
+      if (text.length > 50) {
+        toast.error("⚠ 50자 이하로 입력해주세요!", {
+          position: "top-center",
+          autoClose: 2000,
+        });
+        return;
+      }
+      onInsert(text);
+      setText("");
+    },
+    [text, onInsert]
+  );
 
   return (
     <form onSubmit={handleTodoValue}>

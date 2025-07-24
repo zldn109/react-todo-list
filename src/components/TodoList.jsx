@@ -1,6 +1,7 @@
 import TodoListItem from "./TodoListItem";
 import styled from "styled-components";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
+import { List } from "react-virtualized";
 
 const TodoListBlock = styled.ul`
   list-style: none;
@@ -11,23 +12,28 @@ const TodoListBlock = styled.ul`
 `;
 
 const TodoList = ({ todos, onToggle, onRemove }) => {
-  const bottomRef = useRef(null);
-
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [todos]);
+  const rowRenderer = useCallback(
+    ({ index, key, style }) => {
+      const todo = todos[index];
+      return (
+        <div key={key} style={style}>
+          <TodoListItem todo={todo} onToggle={onToggle} onRemove={onRemove} />
+        </div>
+      );
+    },
+    [todos, onToggle, onRemove]
+  );
 
   return (
     <TodoListBlock>
-      {todos.map((todo) => (
-        <TodoListItem
-          key={todo.id}
-          todo={todo}
-          onToggle={onToggle}
-          onRemove={onRemove}
-        />
-      ))}
-      <div ref={bottomRef} />
+      <List
+        width={640}
+        height={544}
+        rowCount={todos.length}
+        rowHeight={70}
+        rowRenderer={rowRenderer}
+        overscanRowCount={5}
+      />
     </TodoListBlock>
   );
 };
