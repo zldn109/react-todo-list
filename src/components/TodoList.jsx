@@ -1,5 +1,6 @@
 import TodoListItem from "./TodoListItem";
 import styled from "styled-components";
+import { useEffect, useRef } from "react";
 
 const TodoListBlock = styled.ul`
   list-style: none;
@@ -10,6 +11,12 @@ const TodoListBlock = styled.ul`
 `;
 
 const TodoList = ({ todos, onToggle, onRemove }) => {
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [todos]);
+
   return (
     <TodoListBlock>
       {todos.map((todo) => (
@@ -20,6 +27,7 @@ const TodoList = ({ todos, onToggle, onRemove }) => {
           onRemove={onRemove}
         />
       ))}
+      <div ref={bottomRef} />
     </TodoListBlock>
   );
 };
