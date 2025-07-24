@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { MdAdd } from "react-icons/md";
-import { useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -84,4 +84,4 @@ const TodoInsert = ({ onInsert }) => {
   );
 };
 
-export default TodoInsert;
+export default React.memo(TodoInsert);

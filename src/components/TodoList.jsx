@@ -1,6 +1,6 @@
 import TodoListItem from "./TodoListItem";
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const TodoListBlock = styled.ul`
   list-style: none;
@@ -32,4 +32,4 @@ const TodoList = ({ todos, onToggle, onRemove }) => {
   );
 };
 
-export default TodoList;
+export default React.memo(TodoList);
