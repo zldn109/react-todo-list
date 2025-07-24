@@ -18,8 +18,9 @@ function createBulkTodos() {
 
 function App() {
   const [todos, setTodos] = useState(createBulkTodos());
+  const nextId = useRef(2500);
 
-  const onToggle = useCallback((id) => {
+  const handleToggleState = useCallback((id) => {
     setTodos((todos) =>
       todos.map((todo) =>
         todo.id === id ? { ...todo, checked: !todo.checked } : todo
@@ -27,14 +28,28 @@ function App() {
     );
   }, []);
 
-  const onRemove = useCallback((id) => {
+  const handleInsertTodo = useCallback((text) => {
+    const todo = {
+      id: nextId.current,
+      text,
+      checked: false,
+    };
+    setTodos((todos) => [...todos, todo]);
+    nextId.current += 1;
+  }, []);
+
+  const handleRemoveTodo = useCallback((id) => {
     setTodos((todos) => todos.filter((todo) => todo.id !== id));
   }, []);
 
   return (
     <TodoTemplate>
-      <TodoInsert />
-      <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
+      <TodoInsert onInsert={handleInsertTodo} />
+      <TodoList
+        todos={todos}
+        onToggle={handleToggleState}
+        onRemove={handleRemoveTodo}
+      />
     </TodoTemplate>
   );
 }
