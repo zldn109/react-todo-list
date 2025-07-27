@@ -52,7 +52,7 @@ const TodoAddButton = styled.button`
 
 const TodoInsert = ({ onInsert }) => {
   const [text, setText] = useState("");
-  const handleTodoValue = useCallback(
+  const handleSubmitTodo = useCallback(
     (e) => {
       e.preventDefault();
       if (!text.trim()) return;
@@ -71,7 +71,7 @@ const TodoInsert = ({ onInsert }) => {
   );
 
   return (
-    <form onSubmit={handleTodoValue}>
+    <form onSubmit={handleSubmitTodo}>
       <TodoInsertBlock>
         <TodoInput
           placeholder="할 일을 입력하세요"
@@ -88,4 +88,3 @@ const TodoInsert = ({ onInsert }) => {
 };
 
 export default React.memo(TodoInsert);
-
