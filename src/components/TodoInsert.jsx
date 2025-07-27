@@ -52,23 +52,20 @@ const TodoAddButton = styled.button`
 
 const TodoInsert = ({ onInsert }) => {
   const [text, setText] = useState("");
-  const handleSubmitTodo = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (!text.trim()) return;
+  const handleSubmitTodo = (e) => {
+    e.preventDefault();
+    if (!text.trim()) return;
 
-      if (text.length > 50) {
-        toast.error("⚠ 50자 이하로 입력해주세요!", {
-          position: "top-center",
-          autoClose: 2000,
-        });
-        return;
-      }
-      onInsert(text);
-      setText("");
-    },
-    [text, onInsert]
-  );
+    if (text.length > 50) {
+      toast.error("⚠ 50자 이하로 입력해주세요!", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      return;
+    }
+    onInsert(text);
+    setText("");
+  };
 
   return (
     <form onSubmit={handleSubmitTodo}>
