@@ -17,16 +17,10 @@ function createBulkTodos() {
 }
 
 function App() {
-  const [todos, setTodos] = useState(createBulkTodos());
-  const nextId = useRef(2500);
-
-  const handleInsertTodo = useCallback((text) => {
-
-function App() {
   const [todos, setTodos] = useState([]);
   const nextId = useRef(1);
 
-  const onInsert = useCallback((text) => {
+  const handleInsertTodo = useCallback((text) => {
     const todo = {
       id: nextId.current,
       text,
@@ -35,7 +29,6 @@ function App() {
     setTodos((todos) => [...todos, todo]);
     nextId.current += 1;
   }, []);
-
 
   const handleToggleState = useCallback((id) => {
     setTodos((todos) =>
